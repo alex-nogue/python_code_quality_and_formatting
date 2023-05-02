@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "python-code-quality-and-formatting"
+version = "0.1.0"
+description = "Python template with code quality and formatting implementations, to speed up new repository creation"
+authors = ["Alex Nogue Sanchez <alexnogue13@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "python_code_quality_and_formatting"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
