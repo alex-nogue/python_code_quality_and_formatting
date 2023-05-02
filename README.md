@@ -25,6 +25,11 @@ Code quality, formatting and validation:
 - isort
 - pre-commit
 
+- makefile
+- dockerfile
+- sonarqube
+- semantic release
+
 # Dependency manager
 
 ## Poetry
@@ -33,4 +38,22 @@ Poetry allows for an easier packaging and dependency manager. It will help us in
 
 It creates _pyproject.toml_, where dependencies and groups are configured, and creates a lock file _poetry.lock_ where all dependency versions are set.
 
-One can run _poetry init_ and let be guided or copy these two files.
+One can run `poetry init` and let be guided or copy these two files.
+
+# Code quality, formatting and validation
+
+## pre-commit
+
+pre-commit will perform checks whenever code is committed to the git repository. The checks are in general similar to what is to be checked in the CI, usually in code quality in formatting. https://pre-commit.com/
+
+In pre-commit, we set hooks for every check we want pre-commit to perform. This confifuration is found in _.pre-commit-config.yaml_.
+
+The pre-commit to work, one should run in their command line `pre-commit install`.
+
+In addition to running the checks from the modules in this section (pylint, mypy etc), these are the checks performed by pre-commit:
+
+- _trailing-whitespace_: lines of code shouldn't finish with spaces or tabs
+- _end-of-file-fixer_: a file should end with one newline
+- _check-yaml_: yaml files syntax must be parseable
+- _check-added-large-files_: prevents large files from being committed
+- _debug-statements_: to do not commit with debugger imports or calls
