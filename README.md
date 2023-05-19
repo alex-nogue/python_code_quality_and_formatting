@@ -1,5 +1,7 @@
 # python_code_quality_and_formatting
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 This repository contains the settings to set up a set of python code elements listed below. It allows to set one's repository more easily with Python code quality, dependency manager, tests, and CI.
 
 The repository will set the following elements:
@@ -57,3 +59,9 @@ In addition to running the checks from the modules in this section (pylint, mypy
 - _check-yaml_: yaml files syntax must be parseable
 - _check-added-large-files_: prevents large files from being committed
 - _debug-statements_: to do not commit with debugger imports or calls
+
+
+## black
+
+black is a Python code formatter. Example of code formatting is having two line breaks after imports.
+This way, we ensure every contributor to the repository commits code in same formatting rules.
